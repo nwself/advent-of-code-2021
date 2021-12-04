@@ -16,5 +16,6 @@ print([sum([sum([n[0] if n[1] > winner[1] else 0 for n in row]) for row in winne
         [list(map(lambda row: [(int(n), nums[int(n)] if int(n) in nums else len(nums) + 1) for n in row.split()], lines[i:i+6]))[1:] for i in range(0, len(lines), 6)]
     ),
     key=lambda b: b[1],
+    # reverse=True  # uncomment this for part 2
 )[0]]][0])
 
