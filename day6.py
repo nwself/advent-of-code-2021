@@ -18,6 +18,13 @@ def recurse(number, total_days):
     ])
 
 
+recurse_days = functools.partial(recurse, total_days=80)
 print(
-    sum([x + 1 for x in itertools.starmap(recurse, itertools.zip_longest(map(int, next(open("./example6.txt")).split(",")), [], fillvalue=18))])
+    sum([x + 1 for x in map(
+        recurse_days, 
+        map(
+            int, 
+            next(open("./example6.txt")).split(","))
+        )
+    ])
 )
