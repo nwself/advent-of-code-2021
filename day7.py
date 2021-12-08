@@ -1,5 +1,3 @@
-import numpy as np
-
 crabs = list(map(int, next(open("./input7.txt")).split(",")))
 
 print(min([
