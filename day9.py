@@ -26,7 +26,6 @@ basins = []
 for row in range(len(lines)):
     for col in range(len(lines[j])):
         if lines[row][col] != "9" and (row, col) not in marked:
-            print(f"{row},{col}")
             basins.append(recurse(row, col))
 
 print(functools.reduce(operator.mul, sorted(basins)[-3:]))
